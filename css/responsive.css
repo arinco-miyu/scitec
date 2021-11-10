@@ -1,0 +1,153 @@
+
+@media (max-width:1000px) {
+
+/* ------------------
+  　　　全体構造
+------------------ */
+
+    /* 幅調整　横スクロールバーを消すために、500px以上のコンテンツをautoに変更 */
+    .content {
+        /* ↓　width: 960px; */
+        width: auto;
+    }
+    header .inner {
+        width: auto;
+    }
+    main {
+        width: auto;
+    }
+
+
+    /* コンテンツ　500px以下になるとmainとasideの左右配置をなくす */
+    .content {
+        /* ↓　display: flex; */
+        display: block;
+    }
+    
+
+    /* カードデザイン */
+    .others main .card {
+        display: block;
+        text-align: center;
+    }
+    .others main .card img {
+        margin-right: 0;
+        /* ↑　style2.cssでマージンライト20pxが入っているので打ち消すために入れた。 */
+        margin-bottom: 20px;
+    }
+    .others  main .card .desc {
+        width: auto;
+        /* ↑　widthが入っていたら、初期値のwidth: auto;に戻してあげる。幅指定されていた数字を取り除く。 */
+    }
+    
+
+/* ------------------
+  　　　ヘッダー
+------------------ */
+
+    /* ヘッダー　500px以下になると、navタグが消えるように設定 */
+    header nav.pc-nav {
+        display: none;
+    }
+
+
+
+    /* ハンバーガーメニュー */
+
+    /* PC時には非表示 */
+    .hamburger-button {
+        display: flex;
+        background-color: transparent;
+        top: 60px;
+        right: 30px;
+    }
+
+    .hamburger-button path {
+        /* 三本戦の色変更 */
+        fill: red;
+      }
+    
+      /* メニューボタン 四角のところ*/
+    .hamburger-button {
+        /* ↓　透明。今使っているcssは背景色の設定が、白になっているので、透明にした。 */
+        background-color: transparent;
+    }
+
+    /* アイコン　サイズ */
+    .hamburger-button svg {
+        /* ↓　縦横比率、両方を入れてあげないといけない */
+        width: 50px;
+        height: 50px;
+    }
+    
+    /* ナビゲーション メニューボタンを押したら、全画面表示でナビタグを表示するかなどの設定*/
+    .hamburger-nav {
+        height: 100%;
+    }
+    .hamburger-nav li {
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+    }
+    .hamburger-nav li a {
+        text-decoration: none;
+    }
+    
+
+
+
+/* ------------------
+  　　　フッター
+------------------ */
+
+    /* フッター style.cssではdisplay: none スマホサイズになると改行される設定*/
+    footer small br {
+        display: inline;
+        }
+    footer {
+        text-align: center;
+    }
+
+
+    
+
+/* ------------------
+  　　トップページ
+------------------ */
+
+    /* 横にピッタリくっついているコンテンツはおかしいので、少し空けてあげる */
+    #home main h2 {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    #home main p {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+/* ------------------
+  　　メイン
+------------------ */
+    main {
+        margin-bottom: 60px;
+    }
+    .others main {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+/* ------------------
+  　　サイド
+------------------ */
+
+    aside {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 60px;
+    }
+
+
+
+
+
+
+}
